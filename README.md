@@ -1,2 +1,2 @@
 # Feature-Importance-Methods
-Seminararbeit Feature Importance Methods
+Trustworthy ML: Feature Importance Methods
