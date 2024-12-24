@@ -9,8 +9,6 @@ from sklearn.metrics import mean_squared_error
 from fippy import Explainer
 from fippy.samplers import GaussianSampler
 
-from lofo import LOFOImportance, Dataset
-
 
 def fi_means_quantiles(object):
     """Computes mean feature importance over all runs, as well as the
