@@ -9,7 +9,7 @@ n = 10000
 ntrain = 0.7 * n
 
 ### Simulation 1
-# Y = X1 + X2 + X3 + X4 + eps
+# Y = X1 + X2 + X3 + eps
 
 x1 = rnorm(n)
 x2 = rnorm(n)
