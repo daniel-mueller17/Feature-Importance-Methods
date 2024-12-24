@@ -6,7 +6,7 @@ set.seed(123)
 
 n = 10000
 
-ntrain = 0.7 * n
+ntrain = 0.8 * n
 
 ### Simulation 1
 # Y = X1 + X2 + X3 + eps
