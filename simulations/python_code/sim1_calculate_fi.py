@@ -9,6 +9,8 @@ from sklearn.metrics import mean_squared_error
 from fippy import Explainer
 from fippy.samplers import GaussianSampler
 
+from lofo import LOFOImportance, Dataset
+
 
 def fi_means_quantiles(object):
     """Computes mean feature importance over all runs, as well as the
@@ -65,8 +67,10 @@ sim1_pfi = wrk.pfi(X_test, y_test, nr_resample_marginalize = 50)
 df_pfi = fi_means_quantiles(sim1_pfi)
 df_pfi['type'] = 'pfi'
 
+# CFI
+sim1_cfi = wrk.cfi(X_test, y_test, loss = mean_squared_error, sampler = sampler)
+df_cfi = fi_means_quantiles(sim1_cfi)
+df_cfi['type'] = 'cfi'
 
-
-
-
-
+sim1_df_res_pfi_cfi = pd.concat([df_pfi, df_cfi])
+sim1_df_res_pfi_cfi.to_csv("./simulations/data/sim1_df_res_pfi_cfi.csv")
