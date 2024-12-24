@@ -19,7 +19,7 @@ y = x1 + x2 + x3 + rnorm(n, 0.1)
 
 data_sim1 = data.frame(x1 = x1, x2 = x2, x3 = x3, y = y)
 
-
+write.csv(data_sim1, file = "./simulations/data/sim1_data.csv" )
 
 # task = TaskRegr$new(id='simulation1', backend=data_sim1, target='y')
 # learner = lrn('regr.lm')
