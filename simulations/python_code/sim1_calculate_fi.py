@@ -30,7 +30,7 @@ def fi_means_quantiles(object):
 data = pd.read_csv("./simulations/data/sim1_data.csv")
 data = data[['x1', 'x2', 'x3', 'y']]
 
-ntrain = int(0.7 * data.shape[0])
+ntrain = int(0.8 * data.shape[0])
 
 xcolumns = ['x1', 'x2', 'x3']
 # ycolumn = ['y']
@@ -39,7 +39,7 @@ df_train, df_test = data.iloc[0:ntrain,], data.iloc[ntrain:,]
 X_train, y_train = df_train[xcolumns], df_train['y']
 X_test, y_test = df_test[xcolumns], df_test['y']
 
-#X_train, X_test, y_train, y_test = train_test_split(data[['x1', 'x2', 'x3']], data['y'], test_size=0.3, random_state=42)
+#X_train, X_test, y_train, y_test = train_test_split(data[['x1', 'x2', 'x3']], data['y'], test_size=0.2, random_state=42)
 
 
 # fit model
