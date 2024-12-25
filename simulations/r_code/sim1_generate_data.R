@@ -13,7 +13,7 @@ ntrain = 0.8 * n
 
 x1 = rnorm(n)
 x2 = rnorm(n)
-x3 = rnorm(n, sd = 2)
+x3 = rnorm(n)
 
 y = x1 + x2 + x3 + rnorm(n, 0.1)
 
