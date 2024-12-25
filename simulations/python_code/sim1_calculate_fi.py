@@ -1,6 +1,8 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import random
+import torch
 
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
@@ -45,6 +47,8 @@ X_test, y_test = df_test[xcolumns], df_test['y']
 
 # fit model
 np.random.seed(1)
+random.seed(1)
+torch.manual_seed(0)
 
 lm = LinearRegression()
 lm.fit(X_train, y_train)
