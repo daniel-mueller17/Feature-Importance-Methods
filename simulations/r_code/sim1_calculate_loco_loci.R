@@ -13,7 +13,7 @@ loco = function(task, learner, resampling, loss) {
   # maybe $score() ?
   original_loss = original_model$aggregate(loss)
   
-  for (i in length(features)) {
+  for (i in 1:length(features)) {
     features2 = features[-i]
     task2 = task$clone()$select(features2)
     new_model = resample(task = task2, learner = learner, resampling = resampling)
@@ -36,7 +36,7 @@ loci = function(task, learner, resampling, loss) {
   # maybe $score() ?
   featureless_loss = featureless_model$aggregate(loss)
   
-  for (i in length(features)) {
+  for (i in 1:length(features)) {
     features2 = features[i]
     task2 = task$clone()$select(features2)
     new_model = resample(task2, learner, resampling)
