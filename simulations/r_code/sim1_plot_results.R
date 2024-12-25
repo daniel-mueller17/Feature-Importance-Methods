@@ -1,5 +1,6 @@
 library(ggplot2)
 theme_set(theme_bw(base_size = 18))
+color_vector = c("red", "#0066CC", "#FF9900", "#999999", "#9900FF")
 
 
 # load datasets
@@ -18,7 +19,7 @@ sim1 = ggplot(data = df, aes(y = reorder(type, i),  x = importance, fill = reord
   geom_col(position = position_dodge()) +
   labs(y = "method",
        fill = "feature") + 
-  scale_fill_brewer(palette = "Set1", breaks = c("x1", "x2", "x3"), 
+  scale_fill_manual(values = color_vector, breaks = c("x1", "x2", "x3"), 
                     labels = c(expression(X[1]), expression(X[2]), expression(X[3])))
 
 sim1
