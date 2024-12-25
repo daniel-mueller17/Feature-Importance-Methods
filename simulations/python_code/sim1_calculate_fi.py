@@ -48,7 +48,7 @@ X_test, y_test = df_test[xcolumns], df_test['y']
 # fit model
 np.random.seed(1)
 random.seed(1)
-torch.manual_seed(0)
+torch.manual_seed(1)
 
 lm = LinearRegression()
 lm.fit(X_train, y_train)
