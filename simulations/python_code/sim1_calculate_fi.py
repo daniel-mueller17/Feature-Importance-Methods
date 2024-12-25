@@ -18,7 +18,8 @@ def fi_means_quantiles(object):
         A pd.DataFrame with the respective characteristics for every feature.
         features are rows, quantities are columns
     """
-    scores_agg = object.scores.groupby(level=object.groupbycol).mean()
+    # scores_agg = object.scores.groupby(level=object.groupbycol).mean()
+    scores_agg = object.scores
     df = pd.DataFrame(scores_agg.mean(), columns=['mean'])
     df['q.05'] = scores_agg.quantile(0.05)
     df['q.95'] = scores_agg.quantile(0.95)
@@ -66,7 +67,7 @@ df_pfi = fi_means_quantiles(sim1_pfi)
 df_pfi['type'] = 'pfi'
 
 # CFI
-sim1_cfi = wrk.cfi(X_test, y_test, loss = mean_squared_error, sampler = sampler)
+sim1_cfi = wrk.cfi(X_test, y_test, nr_resample_marginalize = 50)
 df_cfi = fi_means_quantiles(sim1_cfi)
 df_cfi['type'] = 'cfi'
 
