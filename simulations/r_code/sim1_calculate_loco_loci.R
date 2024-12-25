@@ -63,13 +63,13 @@ learner = lrn("regr.lm")
 res_loco = loco(task, learner, resampling, loss)
 df_loco = data.frame(feature = names(res_loco),
                      importance = res_loco,
-                     type = "loco")
+                     type = "LOCO")
 
 # calculate LOCI
 res_loci = loci(task, learner, resampling, loss)
 df_loci = data.frame(feature = names(res_loci),
                      importance = res_loci,
-                     type = "loci")
+                     type = "LOCI")
 
 # save results
 df_loco_loci = rbind(df_loco, df_loci)

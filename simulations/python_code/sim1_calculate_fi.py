@@ -64,12 +64,12 @@ wrk = Explainer(lm.predict, X_train, loss = mean_squared_error, sampler = sample
 # PFI
 sim1_pfi = wrk.pfi(X_test, y_test, nr_resample_marginalize = 50)
 df_pfi = fi_means_quantiles(sim1_pfi)
-df_pfi['type'] = 'pfi'
+df_pfi['type'] = 'PFI'
 
 # CFI
 sim1_cfi = wrk.cfi(X_test, y_test, nr_resample_marginalize = 50)
 df_cfi = fi_means_quantiles(sim1_cfi)
-df_cfi['type'] = 'cfi'
+df_cfi['type'] = 'CFI'
 
 sim1_df_res_pfi_cfi = pd.concat([df_pfi, df_cfi])
 sim1_df_res_pfi_cfi.to_csv("./simulations/data/sim1_df_res_pfi_cfi.csv")
