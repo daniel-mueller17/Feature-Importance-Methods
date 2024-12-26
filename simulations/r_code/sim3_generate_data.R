@@ -1,8 +1,8 @@
-set.seed(245)
+set.seed(678)
 
 n = 10000
 
-### Simulation 2
+### Simulation 3
 # Y = X1 + X2 + X3 + eps now with unnecessary X4, X5
 x1 = rnorm(n)
 x2 = rnorm(n)
@@ -14,6 +14,6 @@ y = x1 + x2 + x3 + rnorm(n, sd = 0.1)
 
 y = x1 + x2 + x3 + rnorm(n, 0.1)
 
-data_sim2 = data.frame(x1 = x1, x2 = x2, x3 = x3, x4 = x4, x5 = x5, y = y)
+data_sim3 = data.frame(x1 = x1, x2 = x2, x3 = x3, x4 = x4, x5 = x5, y = y)
 
-write.csv(data_sim2, file = "./simulations/data/sim2_data.csv")
+write.csv(data_sim3, file = "./simulations/data/sim3_data.csv")
