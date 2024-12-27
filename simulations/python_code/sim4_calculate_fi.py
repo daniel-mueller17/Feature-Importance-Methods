@@ -19,11 +19,11 @@ def fi_importance(object):
 
 # datasets to use
 data = pd.read_csv("./simulations/data/sim4_data.csv")
-data = data[['x1', 'x2', 'x3', 'x4', 'x5', 'y']]
+data = data[['x1', 'x2', 'x3', 'x4', 'y']]
 
 ntrain = int(0.8 * data.shape[0])
 
-xcolumns = ['x1', 'x2', 'x3', 'x4', 'x5']
+xcolumns = ['x1', 'x2', 'x3', 'x4']
 # ycolumn = ['y']
 
 df_train, df_test = data.iloc[0:ntrain,], data.iloc[ntrain:,]
