@@ -2,6 +2,7 @@ library(ggplot2)
 theme_set(theme_bw(base_size = 18))
 color_vector = c("red", "#0066CC", "#FF9900", "#999999", "#9900FF", "#99CCFF")
 
+
 # load datasets
 df_pfi_cfi = read.csv("./simulations/data/sim5_df_res_pfi_cfi.csv")
 df_loco_loci = read.csv("./simulations/data/sim5_df_res_loco_loci.csv")

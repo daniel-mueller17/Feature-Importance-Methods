@@ -1,6 +1,6 @@
 library(ggplot2)
 theme_set(theme_bw(base_size = 18))
-color_vector = c("red", "#0066CC", "#FF9900", "#999999", "#9900FF")
+color_vector = c("red", "#0066CC", "#FF9900", "#999999", "#9900FF", "#99CCFF")
 
 
 # load datasets
