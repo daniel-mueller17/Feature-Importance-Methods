@@ -50,7 +50,7 @@ loci = function(task, learner, resampling, loss) {
 
 set.seed(1)
 
-data = read.csv("./simulations/data/sim3_data.csv")
+data = read.csv("./simulations/data/sim4_data.csv")
 data$X = NULL
 
 task = as_task_regr(data, target = "y")
@@ -73,4 +73,4 @@ df_loci = data.frame(feature = names(res_loci),
 
 # save results
 df_loco_loci = rbind(df_loco, df_loci)
-write.csv(df_loco_loci, file = "./simulations/data/sim3_df_res_loco_loci.csv", row.names = FALSE)
+write.csv(df_loco_loci, file = "./simulations/data/sim4_df_res_loco_loci.csv", row.names = FALSE)
