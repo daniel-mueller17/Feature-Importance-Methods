@@ -41,5 +41,4 @@ df_test = data[partition$test,]
 write.csv(df_train, file = "./application_real_data/data/bike_train.csv")
 write.csv(df_test, file = "./application_real_data/data/bike_test.csv")
 
-save(df_train, file = "./application_real_data/data/bike_train.RData")
-save(df_test, file = "./application_real_data/data/bike_test.RData")
+save(data, file = "./application_real_data/data/bike.RData")
