@@ -14,14 +14,15 @@ df$i = length(df$feature):1
 
 
 # Plot
-sim4 = ggplot(data = df, aes(y = reorder(type, i),  x = importance, fill = reorder(feature, i))) +
+sim3 = ggplot(data = df, aes(y = reorder(type, i),  x = importance, fill = reorder(feature, i))) +
   geom_col(position = position_dodge()) +
   labs(y = "method",
        fill = "feature") + 
   scale_fill_manual(values = color_vector, breaks = c("x1", "x2", "x3", "x4"), 
-                    labels = c(expression(X[1]), expression(X[2]), expression(X[3]), expression(X[4])))
+                    labels = c(expression(X[1]), expression(X[2]), expression(X[3]), expression(X[4]))) +
+  theme(legend.position = "bottom")
 
-sim4
+sim3
 
 # Save plot
 ggsave(filename = "./simulations/plots/sim3.pdf")

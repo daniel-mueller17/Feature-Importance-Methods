@@ -19,7 +19,8 @@ sim2 = ggplot(data = df, aes(y = reorder(type, i),  x = importance, fill = reord
   labs(y = "method",
        fill = "feature") + 
   scale_fill_manual(values = color_vector, breaks = c("x1", "x2", "x3", "x4"), 
-                    labels = c(expression(X[1]), expression(X[2]), expression(X[3]), expression(X[4])))
+                    labels = c(expression(X[1]), expression(X[2]), expression(X[3]), expression(X[4]))) +
+  theme(legend.position = "bottom")
 
 sim2
 
