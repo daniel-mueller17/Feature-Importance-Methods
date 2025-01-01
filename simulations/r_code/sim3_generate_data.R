@@ -3,7 +3,7 @@ set.seed(789)
 n = 10000
 
 ### Simulation 3
-# Y = X1 + X2 + X3 + X4 + eps but X3 and X4 higly correlated
+# Y = X1 + X2 + X3 + eps but X3 and X4 higly correlated
 x1 = rnorm(n)
 x2 = rnorm(n)
 x3 = rnorm(n)
