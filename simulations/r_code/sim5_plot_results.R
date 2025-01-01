@@ -20,7 +20,8 @@ sim5 = ggplot(data = df, aes(y = reorder(type, i),  x = importance, fill = reord
        fill = "feature") + 
   scale_fill_manual(values = color_vector, breaks = c("x1", "x2", "x3", "x4", "x5", "x6"), 
                     labels = c(expression(X[1]), expression(X[2]), expression(X[3]), expression(X[4]), expression(X[5]), expression(X[6]))) +
-  theme(legend.position = "bottom")
+  theme(legend.position = "bottom") +
+  guides(fill = guide_legend(nrow = 1))
 
 sim5
 
