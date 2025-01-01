@@ -3,7 +3,7 @@ set.seed(456)
 n = 10000
 
 ### Simulation 2
-# Y = X1 + X2 * X3 + eps now with unnecessary X4
+# Y = X1 + X2 * X3 + eps now with unnecessary X4 and interaction between x2 and x3
 x1 = rnorm(n)
 x2 = rnorm(n)
 x3 = rnorm(n)
