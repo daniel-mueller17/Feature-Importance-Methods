@@ -15,7 +15,7 @@ x1 = rnorm(n)
 x2 = rnorm(n)
 x3 = rnorm(n)
 
-y = x1 + x2 + x3 + rnorm(n, 0.1)
+y = x1 + x2 + x3 + rnorm(n, sd = 0.1)
 
 data_sim1 = data.frame(x1 = x1, x2 = x2, x3 = x3, y = y)
 
